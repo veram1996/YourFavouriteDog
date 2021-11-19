@@ -9,7 +9,10 @@ import SwiftUI
 import Kingfisher
 
 struct DetailsView: View {
+    
+    @Environment(\.openURL) var openURL
     var dogsBreed: BreedModel?
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -18,8 +21,12 @@ struct DetailsView: View {
                     .frame(width: 150, height: 150, alignment: .center)
                     .clipShape(Circle())
                 Group {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 0) {
                         Text("Details")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/.bold())
+                           
+                        Divider()
+                            .padding(.vertical, 15)
                         HStack(alignment: .top) {
                             Text("Name : ")
                                 .font(.callout)
@@ -33,7 +40,7 @@ struct DetailsView: View {
                                 .font(.callout)
                                 .foregroundColor(Color.gray)
                             Text(dogsBreed?.origin ?? "---")
-                           Spacer()
+                            Spacer()
                         }
                         .padding(.bottom, 8)
                         HStack(alignment: .top) {
@@ -43,6 +50,29 @@ struct DetailsView: View {
                             Text(dogsBreed?.lifeSpan ?? "---")
                             Spacer()
                         }
+                        .padding(.bottom, 8)
+                        
+                        HStack(alignment: .top) {
+                            Text("Height : ")
+                                .font(.callout)
+                                .foregroundColor(Color.gray)
+                            Text(dogsBreed?.height?.imperial ?? "---")
+                            Spacer()
+                            Text("Width : ")
+                                .font(.callout)
+                                .foregroundColor(Color.gray)
+                            Text(dogsBreed?.weight?.imperial ?? "---")
+                        }
+                        .padding(.bottom, 8)
+                        
+                        HStack(alignment: .top) {
+                            Text("Temperament : ")
+                                .font(.callout)
+                                .foregroundColor(Color.gray)
+                            Text(dogsBreed?.temperament ?? "---")
+                            Spacer()
+                        }
+                        .padding(.bottom, 8)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.all, 16)
@@ -54,7 +84,7 @@ struct DetailsView: View {
             }
             .padding(.vertical, 25)
             .padding(.horizontal, 20)
-           
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color("background"))

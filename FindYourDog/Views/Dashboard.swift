@@ -29,6 +29,7 @@ struct Dashboard: View {
                                     Text(dashboardViewModel.dogsBreeds?[index].name ?? "")
                                         .font(.headline.bold())
                                 }
+                                
                                 HStack(alignment: .top) {
                                     Text("Origin : ")
                                         .font(.caption)
@@ -52,6 +53,7 @@ struct Dashboard: View {
                 }
             }
             .animation(.easeIn)
+            .background(Color("background"))
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .navigationBarTitle("Find Your Favourite Dog")
             .navigationBarTitleDisplayMode(.inline)
@@ -60,7 +62,6 @@ struct Dashboard: View {
             })
         }
         .edgesIgnoringSafeArea(.bottom)
-        .background(Color("background"))
         
     }
 }
