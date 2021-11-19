@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CB64B38274575460019F093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B37274575460019F093 /* AppDelegate.swift */; };
+		1CB64B3A274575460019F093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B39274575460019F093 /* SceneDelegate.swift */; };
+		1CB64B3C274575460019F093 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B3B274575460019F093 /* ContentView.swift */; };
+		1CB64B3E2745754A0019F093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB64B3D2745754A0019F093 /* Assets.xcassets */; };
+		1CB64B412745754A0019F093 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB64B402745754A0019F093 /* Preview Assets.xcassets */; };
+		1CB64B442745754A0019F093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB64B422745754A0019F093 /* LaunchScreen.storyboard */; };
+		1CB64B4D274576820019F093 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B4C274576820019F093 /* SplashView.swift */; };
+		1CB64B4F27457D120019F093 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B4E27457D120019F093 /* Dashboard.swift */; };
+		1CB64B512746C8480019F093 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B502746C8480019F093 /* DashboardViewModel.swift */; };
+		1CB64B552746C8B20019F093 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B542746C8B20019F093 /* NetworkHelper.swift */; };
+		1CB64B572746C9D90019F093 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B562746C9D90019F093 /* ErrorResponse.swift */; };
+		1CB64B5D27480F1C0019F093 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B5927480F1C0019F093 /* BreedModel.swift */; };
+		1CB64B5E27480F1C0019F093 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B5A27480F1C0019F093 /* ImageModel.swift */; };
+		1CB64B5F27480F1C0019F093 /* WeightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B5B27480F1C0019F093 /* WeightModel.swift */; };
+		1CB64B6027480F1C0019F093 /* HeightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B5C27480F1C0019F093 /* HeightModel.swift */; };
+		1CB64B66274814C60019F093 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B65274814C60019F093 /* APIConstants.swift */; };
+		1CB64B68274814DE0019F093 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B67274814DE0019F093 /* StringConstants.swift */; };
+		1CB64B6B274828F90019F093 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB64B6A274828F90019F093 /* DetailsView.swift */; };
+		1CB64B6F27482F770019F093 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB64B6E27482F770019F093 /* Color.xcassets */; };
+		E19FCC9AE5535F90DE65B397 /* Pods_FindYourDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5B462C3850267336B2243E /* Pods_FindYourDog.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CB64B34274575460019F093 /* FindYourDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB64B37274575460019F093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1CB64B39274575460019F093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1CB64B3B274575460019F093 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1CB64B3D2745754A0019F093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CB64B402745754A0019F093 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1CB64B432745754A0019F093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1CB64B452745754A0019F093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CB64B4C274576820019F093 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		1CB64B4E27457D120019F093 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		1CB64B502746C8480019F093 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		1CB64B542746C8B20019F093 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		1CB64B562746C9D90019F093 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		1CB64B5927480F1C0019F093 /* BreedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
+		1CB64B5A27480F1C0019F093 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		1CB64B5B27480F1C0019F093 /* WeightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightModel.swift; sourceTree = "<group>"; };
+		1CB64B5C27480F1C0019F093 /* HeightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightModel.swift; sourceTree = "<group>"; };
+		1CB64B65274814C60019F093 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		1CB64B67274814DE0019F093 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		1CB64B6A274828F90019F093 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		1CB64B6E27482F770019F093 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		7FD1D9B3C3E138E419133BDC /* Pods-FindYourDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourDog.debug.xcconfig"; path = "Target Support Files/Pods-FindYourDog/Pods-FindYourDog.debug.xcconfig"; sourceTree = "<group>"; };
+		8285897CD53BCC70A935CDBA /* Pods-FindYourDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourDog.release.xcconfig"; path = "Target Support Files/Pods-FindYourDog/Pods-FindYourDog.release.xcconfig"; sourceTree = "<group>"; };
+		8F5B462C3850267336B2243E /* Pods_FindYourDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CB64B31274575460019F093 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19FCC9AE5535F90DE65B397 /* Pods_FindYourDog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB64B2B274575450019F093 = {
+			isa = PBXGroup;
+			children = (
+				1CB64B36274575460019F093 /* FindYourDog */,
+				1CB64B35274575460019F093 /* Products */,
+				92FBFE2C6A4D7FC01E3234BC /* Pods */,
+				F948F7D623E415A39C08F88D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1CB64B35274575460019F093 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B34274575460019F093 /* FindYourDog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CB64B36274575460019F093 /* FindYourDog */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B5827480F1C0019F093 /* Model */,
+				1CB64B6D274829F90019F093 /* Views */,
+				1CB64B61274813870019F093 /* ViewModel */,
+				1CB64B64274814B10019F093 /* Constants */,
+				1CB64B4B2745766E0019F093 /* Splash */,
+				1CB64B6927481B0D0019F093 /* BootStrap */,
+				1CB64B3B274575460019F093 /* ContentView.swift */,
+				1CB64B3D2745754A0019F093 /* Assets.xcassets */,
+				1CB64B6E27482F770019F093 /* Color.xcassets */,
+				1CB64B422745754A0019F093 /* LaunchScreen.storyboard */,
+				1CB64B452745754A0019F093 /* Info.plist */,
+				1CB64B542746C8B20019F093 /* NetworkHelper.swift */,
+				1CB64B3F2745754A0019F093 /* Preview Content */,
+			);
+			path = FindYourDog;
+			sourceTree = "<group>";
+		};
+		1CB64B3F2745754A0019F093 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B402745754A0019F093 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1CB64B4B2745766E0019F093 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B4C274576820019F093 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		1CB64B5827480F1C0019F093 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B562746C9D90019F093 /* ErrorResponse.swift */,
+				1CB64B5927480F1C0019F093 /* BreedModel.swift */,
+				1CB64B5A27480F1C0019F093 /* ImageModel.swift */,
+				1CB64B5B27480F1C0019F093 /* WeightModel.swift */,
+				1CB64B5C27480F1C0019F093 /* HeightModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CB64B61274813870019F093 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B502746C8480019F093 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CB64B64274814B10019F093 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B65274814C60019F093 /* APIConstants.swift */,
+				1CB64B67274814DE0019F093 /* StringConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1CB64B6927481B0D0019F093 /* BootStrap */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B37274575460019F093 /* AppDelegate.swift */,
+				1CB64B39274575460019F093 /* SceneDelegate.swift */,
+			);
+			path = BootStrap;
+			sourceTree = "<group>";
+		};
+		1CB64B6D274829F90019F093 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1CB64B6A274828F90019F093 /* DetailsView.swift */,
+				1CB64B4E27457D120019F093 /* Dashboard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		92FBFE2C6A4D7FC01E3234BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FD1D9B3C3E138E419133BDC /* Pods-FindYourDog.debug.xcconfig */,
+				8285897CD53BCC70A935CDBA /* Pods-FindYourDog.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F948F7D623E415A39C08F88D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F5B462C3850267336B2243E /* Pods_FindYourDog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CB64B33274575460019F093 /* FindYourDog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB64B482745754A0019F093 /* Build configuration list for PBXNativeTarget "FindYourDog" */;
+			buildPhases = (
+				20281538A747C0B2443ED333 /* [CP] Check Pods Manifest.lock */,
+				1CB64B30274575460019F093 /* Sources */,
+				1CB64B31274575460019F093 /* Frameworks */,
+				1CB64B32274575460019F093 /* Resources */,
+				3E7ACC01F1F9C41559AE0100 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindYourDog;
+			productName = FindYourDog;
+			productReference = 1CB64B34274575460019F093 /* FindYourDog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CB64B2C274575460019F093 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					1CB64B33274575460019F093 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 1CB64B2F274575460019F093 /* Build configuration list for PBXProject "FindYourDog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CB64B2B274575450019F093;
+			productRefGroup = 1CB64B35274575460019F093 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CB64B33274575460019F093 /* FindYourDog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CB64B32274575460019F093 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB64B442745754A0019F093 /* LaunchScreen.storyboard in Resources */,
+				1CB64B6F27482F770019F093 /* Color.xcassets in Resources */,
+				1CB64B412745754A0019F093 /* Preview Assets.xcassets in Resources */,
+				1CB64B3E2745754A0019F093 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20281538A747C0B2443ED333 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindYourDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E7ACC01F1F9C41559AE0100 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourDog/Pods-FindYourDog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourDog/Pods-FindYourDog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourDog/Pods-FindYourDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CB64B30274575460019F093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB64B552746C8B20019F093 /* NetworkHelper.swift in Sources */,
+				1CB64B5F27480F1C0019F093 /* WeightModel.swift in Sources */,
+				1CB64B66274814C60019F093 /* APIConstants.swift in Sources */,
+				1CB64B38274575460019F093 /* AppDelegate.swift in Sources */,
+				1CB64B5D27480F1C0019F093 /* BreedModel.swift in Sources */,
+				1CB64B4D274576820019F093 /* SplashView.swift in Sources */,
+				1CB64B4F27457D120019F093 /* Dashboard.swift in Sources */,
+				1CB64B512746C8480019F093 /* DashboardViewModel.swift in Sources */,
+				1CB64B3A274575460019F093 /* SceneDelegate.swift in Sources */,
+				1CB64B6027480F1C0019F093 /* HeightModel.swift in Sources */,
+				1CB64B68274814DE0019F093 /* StringConstants.swift in Sources */,
+				1CB64B6B274828F90019F093 /* DetailsView.swift in Sources */,
+				1CB64B3C274575460019F093 /* ContentView.swift in Sources */,
+				1CB64B572746C9D90019F093 /* ErrorResponse.swift in Sources */,
+				1CB64B5E27480F1C0019F093 /* ImageModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CB64B422745754A0019F093 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB64B432745754A0019F093 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CB64B462745754A0019F093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CB64B472745754A0019F093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CB64B492745754A0019F093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD1D9B3C3E138E419133BDC /* Pods-FindYourDog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FindYourDog/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FindYourDog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dheeraj-Verma.FindYourDog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CB64B4A2745754A0019F093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8285897CD53BCC70A935CDBA /* Pods-FindYourDog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FindYourDog/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FindYourDog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dheeraj-Verma.FindYourDog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CB64B2F274575460019F093 /* Build configuration list for PBXProject "FindYourDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB64B462745754A0019F093 /* Debug */,
+				1CB64B472745754A0019F093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CB64B482745754A0019F093 /* Build configuration list for PBXNativeTarget "FindYourDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB64B492745754A0019F093 /* Debug */,
+				1CB64B4A2745754A0019F093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CB64B2C274575460019F093 /* Project object */;
+}
