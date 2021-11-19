@@ -21,24 +21,28 @@ struct Dashboard: View {
                                 .resizable()
                                 .frame(width: 60, height: 60, alignment: .center)
                                 .clipShape(Circle())
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .leading, spacing: 0) {
                                 HStack(alignment: .top) {
                                     Text("Name : ")
-                                        .font(.callout)
+                                        .font(.caption)
                                         .foregroundColor(Color.gray)
                                     Text(dashboardViewModel.dogsBreeds?[index].name ?? "")
+                                        .font(.headline.bold())
                                 }
                                 HStack(alignment: .top) {
                                     Text("Origin : ")
-                                        .font(.callout)
+                                        .font(.caption)
                                         .foregroundColor(Color.gray)
                                     Text(dashboardViewModel.dogsBreeds?[index].origin ?? "---")
+                                        .font(.footnote)
                                 }
+                                .padding(.vertical, 8)
                                 HStack(alignment: .top) {
                                     Text("Life Span : ")
-                                        .font(.callout)
+                                        .font(.caption)
                                         .foregroundColor(Color.gray)
                                     Text(dashboardViewModel.dogsBreeds?[index].lifeSpan ?? "---")
+                                        .font(.footnote)
                                 }
                                 
                             }
@@ -61,8 +65,3 @@ struct Dashboard: View {
     }
 }
 
-struct Dashboard_Previews: PreviewProvider {
-    static var previews: some View {
-        Dashboard(dashboardViewModel: DashboardViewModel())
-    }
-}

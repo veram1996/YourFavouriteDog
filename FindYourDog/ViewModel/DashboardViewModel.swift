@@ -11,6 +11,10 @@ import Alamofire
 class DashboardViewModel: ObservableObject {
     
     @Published var dogsBreeds: [BreedModel]?
+    var appState: AppState?
+    init(appState: AppState) {
+        self.appState = appState
+    }
     
     func getListOfBreed() {
         let url = APIConstants.baseURL + APIConstants.breeds

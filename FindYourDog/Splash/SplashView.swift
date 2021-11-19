@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+
 var message =  "Find Your Dog"
+
 struct SplashView: View {
+    
     @State var shouldHideSplash = false
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         ZStack {
             decideNextScreen()
@@ -31,7 +36,7 @@ struct SplashView: View {
     }
     
     private func decideNextScreen() -> Dashboard {
-        return Dashboard(dashboardViewModel: DashboardViewModel())
+        return Dashboard(dashboardViewModel: DashboardViewModel(appState: appState))
     }
     private func animateOutSplash() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {

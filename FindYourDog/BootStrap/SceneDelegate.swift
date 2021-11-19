@@ -11,7 +11,8 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    lazy var appState = AppState()
+    var progressLoaderWindow: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -19,15 +20,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+      
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
+         setupWindow(in: windowScene)
+         setupProgressLoaderWindow(in: windowScene)
         }
+    }
+    
+    func setupWindow(in scene: UIWindowScene) {
+        let contentView = ContentView().environmentObject(appState)
+        let window = UIWindow(windowScene: scene)
+        window.rootViewController = HostingController(rootView: contentView)
+        self.window = window
+        window.makeKeyAndVisible()
+    }
+    
+    func setupProgressLoaderWindow(in scene: UIWindowScene) {
+        let progressLoaderWindow = PassThroughWindow(windowScene: scene)
+        let progressLoaderViewController = HostingController(rootView: ActivityIndicator().environmentObject(appState))
+        progressLoaderViewController.view.backgroundColor = .clear
+        progressLoaderWindow.rootViewController = progressLoaderViewController
+        progressLoaderWindow.isHidden = false
+        self.progressLoaderWindow = progressLoaderWindow
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
