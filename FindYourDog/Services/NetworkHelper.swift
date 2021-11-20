@@ -32,8 +32,8 @@ class NetworkHelper {
             }
         } else {
             var error = ErrorResponse()
-            error.error = "No Internet Found"
-            error.errorDescription = "Please check your internet connection"
+            error.error = StringConstants.noInternetFound
+            error.errorDescription = StringConstants.pleaseCheckYourInternetConnection
             errorHandler(error, -1)
         }
     }

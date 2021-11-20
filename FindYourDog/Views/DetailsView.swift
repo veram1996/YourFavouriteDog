@@ -22,7 +22,7 @@ struct DetailsView: View {
                     .clipShape(Circle())
                 Group {
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("Details")
+                        Text(StringConstants.details)
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/.bold())
                            
                         Divider()

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-var message =  "Find Your Dog"
-
 struct SplashView: View {
     
     @State var shouldHideSplash = false
@@ -16,9 +14,11 @@ struct SplashView: View {
     
     var body: some View {
         ZStack {
-            decideNextScreen()
+            if shouldHideSplash {
+                decideNextScreen()
+            }
             ZStack {
-                Text("\(message)")
+                Text(StringConstants.title)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct SplashView: View {
         return Dashboard(dashboardViewModel: DashboardViewModel(appState: appState))
     }
     private func animateOutSplash() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             shouldHideSplash = true
         }
     }

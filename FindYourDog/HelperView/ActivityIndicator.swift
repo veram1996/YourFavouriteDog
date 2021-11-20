@@ -12,7 +12,7 @@ struct ActivityIndicator: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.clear)
+                .foregroundColor(.black.opacity(0.23))
                 .edgesIgnoringSafeArea(.all)
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle())
