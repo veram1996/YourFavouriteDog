@@ -106,12 +106,12 @@
 				1CB64B64274814B10019F093 /* Constants */,
 				1CB64B4B2745766E0019F093 /* Splash */,
 				1CB64B6927481B0D0019F093 /* BootStrap */,
+				1CF5B86F274904CD0021BE60 /* Services */,
 				1CB64B3B274575460019F093 /* ContentView.swift */,
 				1CB64B3D2745754A0019F093 /* Assets.xcassets */,
 				1CB64B6E27482F770019F093 /* Color.xcassets */,
 				1CB64B422745754A0019F093 /* LaunchScreen.storyboard */,
 				1CB64B452745754A0019F093 /* Info.plist */,
-				1CF5B86F274904CD0021BE60 /* Services */,
 				1CB64B3F2745754A0019F093 /* Preview Content */,
 			);
 			path = FindYourDog;
